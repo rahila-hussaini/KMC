@@ -1,5 +1,5 @@
 <!-- =========================
-NEWS-JOBS PAGE (news-jobs.html)
+NEWS-ANNOUNCEMENTS PAGE (news-announcements.html)
 ========================= -->
 <!DOCTYPE html>
 <html lang="en">
@@ -39,28 +39,20 @@ NEWS-JOBS PAGE (news-jobs.html)
     .emergency-btn i {
       margin-right: 5px;
     }
-        
     .news-hero {
       height:45vh;
       display:flex;
       align-items:center;
       color:white;
       background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                    url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
-        }
-
-    .job-card {
+                url('https://images.unsplash.com/photo-1581595219315-a187dd40c322') center/cover;
+    }
+    .news-card {
       background:white;
-      padding:20px;
       border-radius:15px;
+      padding:20px;
       box-shadow:0 10px 25px rgba(0,0,0,0.05);
-      transition:0.3s;
     }
-
-    .job-card:hover {
-      transform:translateY(-5px);
-    }
-
     .btn.active { background:#0d6efd; color:white; }
 
     @keyframes pulse {
@@ -81,8 +73,7 @@ NEWS-JOBS PAGE (news-jobs.html)
     @keyframes zoomBg {
       0% { background-size: 100%; }
       100% { background-size: 110%; }
-    }
-
+    }    
 </style>
 </head>
 
@@ -100,13 +91,25 @@ NEWS-JOBS PAGE (news-jobs.html)
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-      </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">خانه</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">درباره ما</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">خدمات</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">تماس با ما</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="news.html">اخبار</a>
+        </li>
 
         <!-- Language Icon -->
         <li class="nav-item dropdown ms-lg-3">
@@ -115,8 +118,8 @@ NEWS-JOBS PAGE (news-jobs.html)
           </a>
 
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="../news-jobs.php">دری</a></li>
-            <li><a class="dropdown-item" href="news-jobs.html">English</a></li>
+            <li><a class="dropdown-item" href="news-announcements.php">دری</a></li>
+            <li><a class="dropdown-item" href="../news-announcements.html">English</a></li>
           </ul>
         </li>
 
@@ -126,40 +129,37 @@ NEWS-JOBS PAGE (news-jobs.html)
 </nav>
 
 <a href="tel:+93700000000" class="emergency-btn">
-    <i class="bi bi-telephone-fill"></i> Emergency Call
+  <i class="bi bi-telephone-fill"></i> تماس اضطراری
 </a>
 
 
 <section class="news-hero text-center">
 <div class="container">
-<h1>Careers</h1>
-<p>Join our professional medical team</p>
+<h1>اعلامیه‌ها</h1>
+<p>آخرین به‌روزرسانی‌ها از شفاخانه KMC</p>
 </div>
 </section>
 
 <div class="text-center my-4">
-<a href="news.html" class="btn btn-outline-primary btn-sm">All</a>
-<a href="news-health.html" class="btn btn-outline-primary btn-sm">Health Tips</a>
-<a href="news-announcements.html" class="btn btn-outline-primary btn-sm">Announcements</a>
-<a href="news-jobs.html" class="btn btn-outline-primary btn-sm active">Jobs</a>
+<a href="news.html" class="btn btn-outline-primary btn-sm">همه</a>
+<a href="news-health.html" class="btn btn-outline-primary btn-sm">نکات سلامت</a>
+<a href="news-announcements.html" class="btn btn-outline-primary btn-sm active">اعلامیه‌ها</a>
+<a href="news-jobs.html" class="btn btn-outline-primary btn-sm">شغل‌ها</a>
 </div>
 
 <div class="container pb-5">
 
-<div class="job-card mb-3">
-<h5>Nurse</h5>
-<p>Experience: 2+ years | Full-time</p>
-<button class="btn btn-primary btn-sm">Apply Now</button>
+<div class="news-card mb-3">
+<h5>افتتاح بخش جدید قلب و عروق</h5>
+<p>شفاخانه KMC خدمات پیشرفته تشخیص و تداوی بیماری‌های قلبی را با استفاده از تجهیزات مدرن ارائه می‌کند.</p>
 </div>
 
-<div class="job-card mb-3">
-<h5>Lab Technician</h5>
-<p>Experience: 1+ year | Full-time</p>
-<button class="btn btn-primary btn-sm">Apply Now</button>
+<div class="news-card mb-3">
+<h5>برگزاری کمپ رایگان صحی</h5>
+<p>ارائه خدمات رایگان معاینه و تداوی برای حمایت از جامعه محلی و بیماران نیازمند.</p>
 </div>
 
 </div>
-
 
 <!-- Footer -->
 <footer class="bg-dark text-white pt-5 pb-3">
@@ -168,46 +168,46 @@ NEWS-JOBS PAGE (news-jobs.html)
 
       <!-- Hospital Info -->
       <div class="col-md-4 mb-4">
-        <h5 class="fw-bold">KMC Hospital</h5>
+        <h5 class="fw-bold">شفاخانه KMC</h5>
         <p>
-          Providing advanced healthcare services in Kabul with modern technology 
-          and experienced medical professionals.
+          ارائه خدمات صحی پیشرفته در کابل با استفاده از تکنالوژی مدرن 
+          و داکتران مجرب.
         </p>
-        <p><strong>24/7 Emergency:</strong> +93 700 000 000</p>
+        <p><strong>اورژانس ۲۴ ساعته:</strong> +93 700 000 000</p>
       </div>
 
       <!-- Quick Links -->
       <div class="col-md-2 mb-4">
-        <h6 class="fw-bold">Quick Links</h6>
+        <h6 class="fw-bold">لینک‌های سریع</h6>
         <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-          <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
-          <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
-          <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
-          <li><a href="news.html" class="text-white text-decoration-none">News</a></li>
+          <li><a href="index.html" class="text-white text-decoration-none">خانه</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">درباره ما</a></li>
+          <li><a href="services.html" class="text-white text-decoration-none">خدمات</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">تماس با ما</a></li>
+          <li><a href="news.html" class="text-white text-decoration-none">اخبار</a></li>
         </ul>
       </div>
 
       <!-- Departments -->
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold">Departments</h6>
+        <h6 class="fw-bold">بخش‌ها</h6>
         <ul class="list-unstyled">
-          <li>Cardiology</li>
-          <li>Radiology</li>
-          <li>Emergency</li>
-          <li>Laboratory</li>
-          <li>Neurology</li>
+          <li>قلب و عروق</li>
+          <li>رادیولوژی</li>
+          <li>اورژانس</li>
+          <li>لابراتوار</li>
+          <li>مغز و اعصاب</li>
         </ul>
       </div>
 
       <!-- Newsletter / Contact -->
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold">Stay Connected</h6>
-        <p>Subscribe for health tips and updates</p>
+        <h6 class="fw-bold">در ارتباط باشید</h6>
+        <p>برای دریافت نکات صحی و اخبار، عضو شوید</p>
         <form>
           <div class="input-group">
-            <input type="email" class="form-control" placeholder="Your Email">
-            <button class="btn btn-primary">Subscribe</button>
+            <input type="email" class="form-control" placeholder="ایمیل شما">
+            <button class="btn btn-primary">اشتراک</button>
           </div>
         </form>
 
@@ -225,7 +225,7 @@ NEWS-JOBS PAGE (news-jobs.html)
 
     <!-- Bottom -->
     <div class="text-center">
-      <p class="mb-0">© 2026 KMC Hospital - All Rights Reserved</p>
+      <p class="mb-0">© 2026 شفاخانه KMC - تمامی حقوق محفوظ است</p>
     </div>
   </div>
 </footer>

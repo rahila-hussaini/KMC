@@ -82,11 +82,15 @@ NEWS-ANNOUNCEMENTS PAGE (news-announcements.html)
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">KMC Hospital</a>
+    <a class="navbar-brand fw-bold" href="#">شفاخانه KMC</a>
+
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
@@ -94,9 +98,25 @@ NEWS-ANNOUNCEMENTS PAGE (news-announcements.html)
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
       </ul>
+
+        <!-- Language Icon -->
+        <li class="nav-item dropdown ms-lg-3">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            <i class="bi bi-globe2"></i>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../news-announcements.php">دری</a></li>
+            <li><a class="dropdown-item" href="news-announcements.html">English</a></li>
+          </ul>
+        </li>
+
+      </ul>
     </div>
   </div>
 </nav>
+
+
 <a href="tel:+93700000000" class="emergency-btn">
     <i class="bi bi-telephone-fill"></i> Emergency Call
 </a>

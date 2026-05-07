@@ -2,11 +2,11 @@
 HOME PAGE (index.html)
 ========================= -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KMC Hospital</title>
+  <title>شفاخانه KMC</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -145,7 +145,6 @@ HOME PAGE (index.html)
       0% { background-size: 100%; }
       100% { background-size: 110%; }
     }
-
   </style>
 </head>
 <body>
@@ -162,13 +161,25 @@ HOME PAGE (index.html)
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-      </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">خانه</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">درباره ما</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">خدمات</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">تماس با ما</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="news.html">اخبار</a>
+        </li>
 
         <!-- Language Icon -->
         <li class="nav-item dropdown ms-lg-3">
@@ -177,8 +188,8 @@ HOME PAGE (index.html)
           </a>
 
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="../index.php">دری</a></li>
-            <li><a class="dropdown-item" href="index.html">English</a></li>
+            <li><a class="dropdown-item" href="index.php">دری</a></li>
+            <li><a class="dropdown-item" href="../index.html">English</a></li>
           </ul>
         </li>
 
@@ -187,10 +198,14 @@ HOME PAGE (index.html)
   </div>
 </nav>
 
+<a href="tel:+93700000000" class="emergency-btn">
+    <i class="bi bi-telephone-fill"></i> تماس اضطراری
+</a>
+
 <!-- HERO SLIDER -->
 <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
 
-  <!-- Indicators -->
+    <!-- Indicators -->
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
@@ -199,34 +214,27 @@ HOME PAGE (index.html)
 
   <div class="carousel-inner">
 
-    <!-- Slide 1 -->
     <div class="carousel-item active">
       <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3')">
         <div class="hero-content">
-          <h1 class="animate-title">Advanced Healthcare in Kabul</h1>
-          <p class="animate-text">Modern technology with experienced doctors</p>
-          <a href="#" class="btn btn-primary btn-lg animate-btn">Book Appointment</a>
+          <h1 class="animate-title">خدمات صحی پیشرفته در شهر کابل</h1>
+          <p class="animate-text">تکنالوژی مدرن همراه با داکتران مجرب</p>
+          <a href="#" class="btn btn-primary btn-lg animate-btn">رزرو نوبت</a>
         </div>
       </div>
     </div>
 
-    <!-- Slide 2 -->
     <div class="carousel-item">
       <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1538108149393-fbbd81895907')">
         <div class="hero-content">
-          <h1 class="animate-title">Professional Medical Team</h1>
-          <p class="animate-text">Trusted by thousands of patients</p>
-          <a href="#" class="btn btn-primary btn-lg animate-btn">Meet Doctors</a>
+          <h1 class="animate-title">تیم طبی متخصص و حرفه‌ای</h1>
+          <p class="animate-text">مورد اعتماد هزاران مریض</p>
+          <a href="#" class="btn btn-primary btn-lg animate-btn">مشاهده داکتران</a>
         </div>
       </div>
     </div>
-    <a href="tel:+93700000000" class="emergency-btn">
-      <i class="bi bi-telephone-fill"></i> Emergency Call
-    </a>
-
   </div>
-
-  <!-- Controls -->
+    <!-- Controls -->
   <button class="carousel-control-prev" data-bs-target="#heroCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </button>
@@ -236,37 +244,38 @@ HOME PAGE (index.html)
   
 </div>
 
+
 <!-- Services -->
 <section class="py-5">
   <div class="container">
-    <h2 class="section-title text-center">Our Departments</h2>
+    <h2 class="section-title text-center">بخش‌های ما</h2>
 
     <div class="row g-4">
 
       <div class="col-md-4">
         <div class="dept-card">
           <i class="bi bi-heart-pulse"></i>
-          <h5>Cardiology</h5>
-          <p>Advanced heart care, ECG, and cardiac diagnostics.</p>
-          <a href="#" class="read-more">Learn More →</a>
+          <h5>قلب و عروق</h5>
+          <p>مراقبت پیشرفته قلب، ECG و تشخیصات قلبی</p>
+          <a href="#" class="read-more">بیشتر بدانید ← </a>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="dept-card">
           <i class="bi bi-hospital"></i>
-          <h5>Radiology</h5>
-          <p>CT Scan, X-Ray, and modern imaging services.</p>
-          <a href="#" class="read-more">Learn More →</a>
+          <h5>رادیولوژی</h5>
+          <p>سی‌تی اسکن، ایکس‌ری و خدمات تصویربرداری مدرن</p>
+          <a href="#" class="read-more">بیشتر بدانید ←</a>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="dept-card">
           <i class="bi bi-activity"></i>
-          <h5>Emergency</h5>
-          <p>24/7 emergency response with expert staff.</p>
-          <a href="#" class="read-more">Learn More →</a>
+          <h5>اورژانس</h5>
+          <p>خدمات اضطراری ۲۴ ساعته با تیم متخصص</p>
+          <a href="#" class="read-more">بیشتر بدانید ←</a>
         </div>
       </div>
 
@@ -285,29 +294,29 @@ HOME PAGE (index.html)
 
       <!-- Right Content -->
       <div class="col-md-6">
-        <h2 class="section-title">Why Choose KMC?</h2>
+        <h2 class="section-title">چرا KMC را انتخاب کنیم؟</h2>
 
         <div class="why-item">
           <i class="bi bi-check-circle-fill"></i>
           <div>
-            <h6>Experienced Doctors</h6>
-            <p>Highly trained professionals with international standards.</p>
+            <h6>داکتران مجرب</h6>
+            <p>متخصصین آموزش‌دیده با معیارهای بین‌المللی.</p>
           </div>
         </div>
 
         <div class="why-item">
           <i class="bi bi-check-circle-fill"></i>
           <div>
-            <h6>Modern Equipment</h6>
-            <p>Advanced diagnostic and treatment technologies.</p>
+            <h6>تجهیزات مدرن</h6>
+            <p>تکنالوژی‌های پیشرفته تشخیص و تداوی.</p>
           </div>
         </div>
 
         <div class="why-item">
           <i class="bi bi-check-circle-fill"></i>
           <div>
-            <h6>24/7 Emergency</h6>
-            <p>Always available for urgent medical care.</p>
+            <h6>اورژانس ۲۴ ساعته</h6>
+            <p>همیشه آماده ارائه خدمات عاجل صحی.</p>
           </div>
         </div>
 
@@ -317,29 +326,28 @@ HOME PAGE (index.html)
   </div>
 </section>
 
-
 <section class="py-5 text-white" style="background:#2776eebd;">
   <div class="container text-center">
     <div class="row">
 
       <div class="col-md-3">
         <h2 class="fw-bold">10,000+</h2>
-        <p>Patients Treated</p>
+        <p>مریضان تداوی شده</p>
       </div>
 
       <div class="col-md-3">
         <h2 class="fw-bold">50+</h2>
-        <p>Qualified Doctors</p>
+        <p>داکتران متخصص</p>
       </div>
 
       <div class="col-md-3">
         <h2 class="fw-bold">20+</h2>
-        <p>Departments</p>
+        <p>بخش‌ها</p>
       </div>
 
       <div class="col-md-3">
         <h2 class="fw-bold">24/7</h2>
-        <p>Emergency Service</p>
+        <p>خدمات اضطراری</p>
       </div>
 
     </div>
@@ -348,9 +356,9 @@ HOME PAGE (index.html)
 
 <section class="py-5 text-center text-white" style="background:#2776eebd;">
   <div class="container">
-    <h2 class="fw-bold">Need a Doctor for Check-up?</h2>
-    <p class="lead">Book your appointment now and get professional care</p>
-    <a href="#" class="btn btn-light btn-lg">Book Appointment</a>
+    <h2 class="fw-bold">به داکتر برای معاینه نیاز دارید؟</h2>
+    <p class="lead">همین حالا نوبت خود را رزرو کنید و از خدمات مسلکی بهره‌مند شوید</p>
+    <a href="#" class="btn btn-light btn-lg">رزرو نوبت</a>
   </div>
 </section>
 
@@ -361,46 +369,46 @@ HOME PAGE (index.html)
 
       <!-- Hospital Info -->
       <div class="col-md-4 mb-4">
-        <h5 class="fw-bold">KMC Hospital</h5>
+        <h5 class="fw-bold">شفاخانه KMC</h5>
         <p>
-          Providing advanced healthcare services in Kabul with modern technology 
-          and experienced medical professionals.
+          ارائه خدمات صحی پیشرفته در کابل با استفاده از تکنالوژی مدرن 
+          و داکتران مجرب.
         </p>
-        <p><strong>24/7 Emergency:</strong> +93 700 000 000</p>
+        <p><strong>اورژانس ۲۴ ساعته:</strong> +93 700 000 000</p>
       </div>
 
       <!-- Quick Links -->
       <div class="col-md-2 mb-4">
-        <h6 class="fw-bold">Quick Links</h6>
+        <h6 class="fw-bold">لینک‌های سریع</h6>
         <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-          <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
-          <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
-          <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
-          <li><a href="news.html" class="text-white text-decoration-none">News</a></li>
+          <li><a href="index.html" class="text-white text-decoration-none">خانه</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">درباره ما</a></li>
+          <li><a href="services.html" class="text-white text-decoration-none">خدمات</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">تماس با ما</a></li>
+          <li><a href="news.html" class="text-white text-decoration-none">اخبار</a></li>
         </ul>
       </div>
 
       <!-- Departments -->
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold">Departments</h6>
+        <h6 class="fw-bold">بخش‌ها</h6>
         <ul class="list-unstyled">
-          <li>Cardiology</li>
-          <li>Radiology</li>
-          <li>Emergency</li>
-          <li>Laboratory</li>
-          <li>Neurology</li>
+          <li>قلب و عروق</li>
+          <li>رادیولوژی</li>
+          <li>اورژانس</li>
+          <li>لابراتوار</li>
+          <li>مغز و اعصاب</li>
         </ul>
       </div>
 
       <!-- Newsletter / Contact -->
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold">Stay Connected</h6>
-        <p>Subscribe for health tips and updates</p>
+        <h6 class="fw-bold">در ارتباط باشید</h6>
+        <p>برای دریافت نکات صحی و اخبار، عضو شوید</p>
         <form>
           <div class="input-group">
-            <input type="email" class="form-control" placeholder="Your Email">
-            <button class="btn btn-primary">Subscribe</button>
+            <input type="email" class="form-control" placeholder="ایمیل شما">
+            <button class="btn btn-primary">اشتراک</button>
           </div>
         </form>
 
@@ -418,7 +426,7 @@ HOME PAGE (index.html)
 
     <!-- Bottom -->
     <div class="text-center">
-      <p class="mb-0">© 2026 KMC Hospital - All Rights Reserved</p>
+      <p class="mb-0">© 2026 شفاخانه KMC - تمامی حقوق محفوظ است</p>
     </div>
   </div>
 </footer>
@@ -447,5 +455,6 @@ HOME PAGE (index.html)
     wrap: true        // loop forever
   });
 </script>
+
 </body>
 </html>
