@@ -90,38 +90,62 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
+
+    <!-- Logo -->
     <a class="navbar-brand fw-bold" href="#">شفاخانه KMC</a>
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Menu -->
     <div class="collapse navbar-collapse" id="nav">
+
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">خانه</a>
-        </li>
+        <!-- Home -->
+        <li class="nav-item"><a class="nav-link" href="index.html">خانه</a></li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">درباره ما</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="services.html">خدمات</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">تماس با ما</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="news.html">اخبار</a>
-        </li>
-
-        <!-- Language Icon -->
-        <li class="nav-item dropdown ms-lg-3">
+        <!-- About Dropdown -->
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            درباره ما
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="about.html">درباره ما</a></li>
+            <li><a class="dropdown-item" href="doctors.html">داکتران</a></li>
+          </ul>
+        </li>
+
+        <!-- Services -->
+        <li class="nav-item"><a class="nav-link" href="services.html">خدمات</a></li>
+
+        <!-- Contact -->
+        <li class="nav-item"><a class="nav-link" href="contact.html">تماس با ما</a></li>
+
+        <!-- News Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">اخبار</a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="news.html"> همه اخبار</a></li>
+            <li> <a class="dropdown-item" href="news-health.html">نکات سلامت</a></li>
+            <li><a class="dropdown-item" href="news-announcements.html">اعلانات</a></li>
+            <li><a class="dropdown-item" href="news-jobs.html">شغل</a></li>
+            <li><a class="dropdown-item" href="articles.html">مقالات</a></li>
+          </ul>
+        </li>
+
+        <!-- Language Dropdown -->
+        <li class="nav-item dropdown ms-lg-3">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             role="button"
+             data-bs-toggle="dropdown">
             <i class="bi bi-globe2"></i>
           </a>
 
@@ -130,7 +154,6 @@
             <li><a class="dropdown-item" href="../services.html">English</a></li>
           </ul>
         </li>
-
       </ul>
     </div>
   </div>
