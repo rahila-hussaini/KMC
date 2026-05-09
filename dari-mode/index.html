@@ -2,7 +2,7 @@
 HOME PAGE (index.html)
 ========================= -->
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" >
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,23 @@ HOME PAGE (index.html)
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
     body { font-family: 'Segoe UI', sans-serif; }
+    footer p,
+    footer h1,
+    footer h2,
+    footer h3,
+    footer h4,
+    footer h5,
+    footer h6,
+    footer a,
+    footer li,
+    #index-content {
+      text-align: right;
+      direction: rtl;
+    }
     .navbar {
       position: sticky;
       top: 0;
@@ -65,7 +79,7 @@ HOME PAGE (index.html)
 
     .section-title { font-weight: bold; margin-bottom: 30px; }
     .card:hover { transform: translateY(-5px); transition: 0.3s; }
-    footer { background: #0d6efd; color: white; padding: 20px 0; }
+    footer { background: #0d6efd; color: white; padding: 20px 0;}
     .emergency-btn {
       position: fixed;
       bottom: 25px;
@@ -114,18 +128,235 @@ HOME PAGE (index.html)
       color: #0d6efd;
       text-decoration: none;
       font-weight: 500;
-    }
-    .why-item {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 20px;
+      direction: rtl;
     }
 
-    .why-item i {
-      font-size: 22px;
-      color: #0d6efd;
-      margin-top: 5px;
+
+
+    .why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-direction: row;  /* Normal row direction */
+}
+
+/* Icon will naturally be on right due to RTL */
+.why-item i {
+  font-size: 22px;
+  color: #0d6efd;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+/* Text takes remaining space */
+.why-item > div {
+  flex: 1;
+}
+
+.section-title {
+  text-align: right;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+#index-content {
+  padding-right: 20px;
+}    
+     /* Premium Animated Gradient Background */
+    .premium-stats {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #2776ee 50%, #1e5fcf 75%, #0d3b8c 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+      position: relative;
+      overflow: hidden;
     }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating particles animation */
+    .premium-stats::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: radial-gradient(circle at 20% 40%, rgba(255,255,255,0.1) 2px, transparent 2px);
+      background-size: 30px 30px;
+      animation: floatParticles 20s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatParticles {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-100px); }
+    }
+
+    /* Glossy Stat Cards */
+    .stat-card-premium {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      padding: 1.8rem 1rem;
+      margin: 0.5rem;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    /* Shine effect on hover */
+    .stat-card-premium::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+      transform: rotate(25deg);
+      transition: 0.5s;
+      opacity: 0;
+    }
+
+    .stat-card-premium:hover::before {
+      left: 100%;
+      opacity: 1;
+      transition: 0.7s;
+    }
+
+    .stat-card-premium:hover {
+      transform: translateY(-12px) scale(1.02);
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .stat-icon {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .stat-card-premium:hover .stat-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #fff, #ffd89b);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    /* Premium CTA Area */
+    .cta-premium {
+      margin-top: 2rem;
+      padding: 2rem 2rem 1.5rem;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      border-radius: 60px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: 0.3s;
+    }
+
+    .cta-premium:hover {
+      background: rgba(0, 0, 0, 0.3);
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff, #FFE6B0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Premium Button */
+    .btn-premium {
+      background: linear-gradient(135deg, #fff, #f0f9ff);
+      color: #1e5fcf;
+      padding: 14px 42px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-radius: 50px;
+      border: none;
+      transition: 0.3s;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-premium::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+      transition: 0.5s;
+    }
+
+    .btn-premium:hover::before {
+      left: 100%;
+    }
+
+    .btn-premium:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+      color: #0d3b8c;
+    }
+
+    /* Pulse animation for emergency badge */
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; transform: scale(1.05); }
+    }
+
+    .emergency-badge {
+      display: inline-block;
+      animation: pulse 1.5s ease infinite;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .stat-number { font-size: 2rem; }
+      .stat-icon { font-size: 2.2rem; }
+      .cta-title { font-size: 1.6rem; }
+      .btn-premium { padding: 10px 28px; font-size: 1rem; }
+      .cta-premium { padding: 1.5rem 1rem; }
+    }
+    
     @keyframes pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.08); }
@@ -306,21 +537,22 @@ HOME PAGE (index.html)
   </div>
 </section>
 
+<!-- Content -->
 <section class="py-5 bg-light">
-  <div class="container">
+  <div class="container" id="content">
     <div class="row align-items-center">
 
       <!-- Left Image -->
-      <div class="col-md-6">
+      <div class="col-md-6" style="margin-left: 100px;">
         <img src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvc3BpdGFsfGVufDB8fDB8fHww" class="img-fluid rounded shadow">
       </div>
 
       <!-- Right Content -->
-      <div class="col-md-6">
+      <div class="col-md-6" id="index-content" style="margin-left: -200px;">
         <h2 class="section-title">چرا KMC را انتخاب کنیم؟</h2>
 
         <div class="why-item">
-          <i class="bi bi-check-circle-fill"></i>
+          <i class="bi bi-check-circle-fill" ></i>
           <div>
             <h6>داکتران مجرب</h6>
             <p>متخصصین آموزش‌دیده با معیارهای بین‌المللی.</p>
@@ -349,39 +581,63 @@ HOME PAGE (index.html)
   </div>
 </section>
 
-<section class="py-5 text-white" style="background:#2776eebd;">
-  <div class="container text-center">
-    <div class="row">
-
-      <div class="col-md-3">
-        <h2 class="fw-bold">10,000+</h2>
-        <p>مریضان تداوی شده</p>
+<!-- Premium Stats -->
+<section class="premium-stats py-5 text-white">
+  <div class="container py-4">
+    <!-- Stats Row with Icons -->
+    <div class="row g-4 mb-5">
+      
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-card-premium text-center">
+          <i class="fas fa-heartbeat stat-icon"></i>
+          <div class="stat-number" data-target="10000">0+</div>
+          <div class="stat-label">بیماران درمان شده</div>
+        </div>
       </div>
 
-      <div class="col-md-3">
-        <h2 class="fw-bold">50+</h2>
-        <p>داکتران متخصص</p>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-card-premium text-center">
+          <i class="fas fa-user-md stat-icon"></i>
+          <div class="stat-number" data-target="50">0+</div>
+          <div class="stat-label">داکتران متخصص</div>
+        </div>
       </div>
 
-      <div class="col-md-3">
-        <h2 class="fw-bold">20+</h2>
-        <p>بخش‌ها</p>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-card-premium text-center">
+          <i class="fas fa-building stat-icon"></i>
+          <div class="stat-number" data-target="20">0+</div>
+          <div class="stat-label">بخش‌ها</div>
+        </div>
       </div>
 
-      <div class="col-md-3">
-        <h2 class="fw-bold">24/7</h2>
-        <p>خدمات اضطراری</p>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-card-premium text-center">
+          <i class="fas fa-ambulance stat-icon emergency-badge"></i>
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">خدمت اورژانس</div>
+        </div>
       </div>
 
     </div>
-  </div>
-</section>
 
-<section class="py-5 text-center text-white" style="background:#2776eebd;">
-  <div class="container">
-    <h2 class="fw-bold">به داکتر برای معاینه نیاز دارید؟</h2>
-    <p class="lead">همین حالا نوبت خود را رزرو کنید و از خدمات مسلکی بهره‌مند شوید</p>
-    <a href="#" class="btn btn-light btn-lg">رزرو نوبت</a>
+    <!-- CTA Section -->
+    <div class="cta-premium text-center">
+      <h2 class="cta-title">
+        <i class="fas fa-stethoscope me-2"></i>
+        نیاز به داکتر برای چک آپ دارید؟
+      </h2>
+      <p class="cta-subtitle">
+        <i class="fas fa-clock me-1"></i> نوبت‌های همان روز • متخصصان برتر • پشتیبانی 24/7
+      </p>
+      <a href="#" class="btn btn-premium">
+        <i class="fas fa-calendar-check me-2"></i> رزرو نوبت
+        <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+      <p class="mt-3 small opacity-75">
+        <i class="fas fa-shield-alt me-1"></i> مشاوره رایگان • بیمه پذیرفته • تأیید فوری
+      </p>
+    </div>
   </div>
 </section>
 
@@ -414,8 +670,8 @@ HOME PAGE (index.html)
 
       <!-- Departments -->
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold">بخش‌ها</h6>
-        <ul class="list-unstyled">
+        <h6 class="fw-bold pe-md-5">بخش‌ها</h6>
+        <ul class="list-unstyled pe-md-5">
           <li>قلب و عروق</li>
           <li>رادیولوژی</li>
           <li>اورژانس</li>
@@ -425,7 +681,7 @@ HOME PAGE (index.html)
       </div>
 
       <!-- Newsletter / Contact -->
-      <div class="col-md-3 mb-4">
+      <div class="col-md-3 mb-4 ">
         <h6 class="fw-bold">در ارتباط باشید</h6>
         <p>برای دریافت نکات صحی و اخبار، عضو شوید</p>
         <form>
@@ -449,7 +705,9 @@ HOME PAGE (index.html)
 
     <!-- Bottom -->
     <div class="text-center">
-      <p class="mb-0">© 2026 شفاخانه KMC - تمامی حقوق محفوظ است</p>
+      <p class="mb-0" style="text-align:center;">
+        © 2026 شفاخانه KMC - تمامی حقوق محفوظ است
+      </p>
     </div>
   </div>
 </footer>
@@ -457,27 +715,46 @@ HOME PAGE (index.html)
 <!-- Bootstrap Icons -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Counter Animation Script -->
 <script>
-  const carousel = document.getElementById('heroCarousel');
+  (function() {
+    // Fixed: Select .stat-number instead of .counter
+    const counters = document.querySelectorAll('.stat-number');
+    
+    function startCounter(counter) {
+      // Skip if it's the 24/7 one (no data-target)
+      if (!counter.hasAttribute('data-target')) return;
+      
+      const target = parseInt(counter.getAttribute('data-target'));
+      let current = 0;
+      const increment = target / 55;
+      const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+          counter.innerText = Math.floor(current).toLocaleString() + '+';
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.innerText = target.toLocaleString() + '+';
+        }
+      };
+      updateCounter();
+    }
 
-  carousel.addEventListener('slide.bs.carousel', function () {
-    const items = carousel.querySelectorAll('.animate-title, .animate-text, .animate-btn');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          if (!counter.classList.contains('counted') && counter.hasAttribute('data-target')) {
+            counter.classList.add('counted');
+            startCounter(counter);
+          }
+          observer.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.4 });
 
-    items.forEach(el => {
-      el.style.animation = 'none';
-      el.offsetHeight; // trigger reflow
-      el.style.animation = '';
-    });
-  });
+    counters.forEach(counter => observer.observe(counter));
+  })();
 </script>
-<script>
-  const myCarousel = new bootstrap.Carousel('#heroCarousel', {
-    interval: 5000,   // time between slides (5 sec)
-    ride: 'carousel',
-    pause: false,     // don't stop on hover
-    wrap: true        // loop forever
-  });
-</script>
-
 </body>
 </html>
