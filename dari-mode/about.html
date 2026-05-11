@@ -12,7 +12,7 @@ ABOUT PAGE (about.html)
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
-    body { font-family: 'Segoe UI', sans-serif; text-align: right;}
+    body { font-family: 'Segoe UI', sans-serif; text-align: right; }
     .navbar {
       position: sticky;
       top: 0;
@@ -61,6 +61,114 @@ ABOUT PAGE (about.html)
       height: 40vh;
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                   url('https://plus.unsplash.com/premium_photo-1681843126728-04eab730febe?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGhvc3BpdGFsfGVufDB8fDB8fHww') center/cover;
+    }
+ /* Premium Animated Gradient Background */
+    .premium-stats {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #2776ee 50%, #1e5fcf 75%, #0d3b8c 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating particles animation */
+    .premium-stats::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: radial-gradient(circle at 20% 40%, rgba(255,255,255,0.1) 2px, transparent 2px);
+      background-size: 30px 30px;
+      animation: floatParticles 20s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatParticles {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-100px); }
+    }
+
+    /* Glossy Stat Cards */
+    .stat-card-premium {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      padding: 1.8rem 1rem;
+      margin: 0.5rem;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    /* Shine effect on hover */
+    .stat-card-premium::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+      transform: rotate(25deg);
+      transition: 0.5s;
+      opacity: 0;
+    }
+
+    .stat-card-premium:hover::before {
+      left: 100%;
+      opacity: 1;
+      transition: 0.7s;
+    }
+
+    .stat-card-premium:hover {
+      transform: translateY(-12px) scale(1.02);
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .stat-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .stat-card-premium:hover .stat-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #fff, #ffd89b);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      .stat-number { font-size: 2rem; }
+      .stat-icon { font-size: 2.2rem; }
     }
 
     @keyframes pulse {
@@ -165,21 +273,21 @@ ABOUT PAGE (about.html)
 
 <section class="about-hero text-white d-flex align-items-center">
   <div class="container text-center">
-    <h1 class="fw-bold">درباره شفاخانه KMC</h1>
+    <h1 class="fw-bold" style="direction: rtl;">درباره شفاخانه KMC</h1>
     <p class="lead">متعهد به ارائه خدمات صحی با کیفیت در کابل</p>
   </div>
 </section>
 
 <section class="py-5">
   <div class="container">
-    <div class="row align-items-center">
+    <div class="row align-items-center" >
 
-      <div class="col-md-6">
+      <div class="col-md-4">
         <img src="https://plus.unsplash.com/premium_photo-1681843129112-f7d11a2f17e3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aG9zcGl0YWx8ZW58MHx8MHx8fDA%3D" class="img-fluid rounded shadow">
       </div>
 
-      <div class="col-md-6">
-        <h2>ما که هستیم</h2>
+      <div class="col-md-8" style="direction: rtl; ">
+        <h2>ما کی هستیم</h2>
         <p>
           شفاخانه KMC یکی از مراکز پیشرو خدمات صحی در کابل است 
           که به ارائه خدمات طبی با کیفیت بالا با استفاده از تکنالوژی مدرن 
@@ -201,37 +309,51 @@ ABOUT PAGE (about.html)
   </div>
 </section>
 
-<section class="py-5 text-white" style="background:#2776eebd;">
-  <div class="container text-center">
-    <div class="row">
 
-      <div class="col-md-3">
-        <h2>10,000+</h2>
-        <p>مریضان خدمات دریافت کرده</p>
+<section class="premium-stats py-5 text-white">
+  <div class="container py-4">
+    <div class="row g-4">
+      
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-card-premium text-center">
+          <i class="fas fa-heartbeat stat-icon"></i>
+          <div class="stat-number" data-target="10000">0</div>
+          <div class="stat-label">مریضانی که خدمات دریافت کرده</div>
+        </div>
       </div>
 
-      <div class="col-md-3">
-        <h2>50+</h2>
-        <p>داکتران</p>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-card-premium text-center">
+          <i class="fas fa-user-md stat-icon"></i>
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">داکتران متخصص</div>
+        </div>
       </div>
 
-      <div class="col-md-3">
-        <h2>15+</h2>
-        <p>سال تجربه</p>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-card-premium text-center">
+          <i class="fas fa-calendar-alt stat-icon"></i>
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">سال تجربه</div>
+        </div>
       </div>
 
-      <div class="col-md-3">
-        <h2>20+</h2>
-        <p>بخش‌ها</p>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-card-premium text-center">
+          <i class="fas fa-building stat-icon"></i>
+          <div class="stat-number" data-target="20">0</div>
+          <div class="stat-label">بخش‌های تخصصی</div>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
+
 <section class="py-5">
   <div class="container">
-    <div class="row g-4 text-center">
+    <div class="row g-4 text-center" style="direction: rtl; text-align: center;">
 
       <div class="col-md-6">
         <div class="card p-4 shadow-sm">
@@ -286,7 +408,7 @@ ABOUT PAGE (about.html)
         <div class="card shadow-sm p-3">
           <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle mx-auto" width="100">
           <h5 class="mt-3">داکتر فرید خان</h5>
-          <p class="text-muted">متخصص اورژانس</p>
+          <p class="text-muted">متخصص بخش عاجل</p>
         </div>
       </div>
 
@@ -297,7 +419,7 @@ ABOUT PAGE (about.html)
 
 <section class="py-5 text-center text-white" style="background:#2776eebd;">
   <div class="container">
-    <h2>به کمک طبی نیاز دارید؟</h2>
+    <h2>آیا به کمک طبی نیاز دارید؟</h2>
     <p>همین امروز با ما تماس بگیرید یا نوبت خود را آنلاین رزرو کنید</p>
     <a href="contact.html" class="btn btn-light btn-lg">تماس با ما</a>
   </div>
@@ -316,7 +438,7 @@ ABOUT PAGE (about.html)
           ارائه خدمات صحی پیشرفته در کابل با استفاده از تکنالوژی مدرن 
           و داکتران مجرب.
         </p>
-        <p><strong>اورژانس ۲۴ ساعته:</strong> +93 700 000 000</p>
+        <p><strong>بخش عاجل ۲۴ ساعته:</strong> +93 700 000 000</p>
       </div>
 
       <!-- Quick Links -->
@@ -337,7 +459,7 @@ ABOUT PAGE (about.html)
         <ul class="list-unstyled pe-md-5">
           <li>قلب و عروق</li>
           <li>رادیولوژی</li>
-          <li>اورژانس</li>
+          <li>بخش عاجل</li>
           <li>لابراتوار</li>
           <li>مغز و اعصاب</li>
         </ul>
@@ -345,7 +467,7 @@ ABOUT PAGE (about.html)
 
       <!-- Newsletter / Contact -->
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold">در ارتباط باشید</h6>
+        <h6 class="fw-bold"> با ما در ارتباط باشید</h6>
         <p>برای دریافت نکات صحی و اخبار، عضو شوید</p>
         <form>
           <div class="input-group">
@@ -376,6 +498,42 @@ ABOUT PAGE (about.html)
 <!-- Bootstrap Icons -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Counter Animation Script -->
+<script>
+  (function() {
+    const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+    
+    function animateNumber(element) {
+      const target = parseInt(element.getAttribute('data-target'));
+      let current = 0;
+      const increment = target / 60;
+      
+      const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+          element.innerText = Math.floor(current).toLocaleString();
+          requestAnimationFrame(updateCounter);
+        } else {
+          element.innerText = target.toLocaleString();
+        }
+      };
+      updateCounter();
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+          entry.target.classList.add('animated');
+          animateNumber(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    statNumbers.forEach(stat => observer.observe(stat));
+  })();
+</script>
 </body>
 </html>
 
