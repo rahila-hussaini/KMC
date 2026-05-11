@@ -16,6 +16,7 @@ TEAM PAGE (team.html)
     body{
       font-family:'Segoe UI', sans-serif;
       background:#f8f9fa;
+      text-align: right;
     }
 
     .navbar{
@@ -23,7 +24,11 @@ TEAM PAGE (team.html)
       top:0;
       z-index:999;
     }
-
+    @media (max-width: 768px) {
+      .navbar{
+        text-align: right;
+        }
+      }
     .team-hero{
       height:35vh;
       background:
@@ -120,7 +125,19 @@ TEAM PAGE (team.html)
       background:#212529;
       color:white;
     }
-
+    footer p,
+    footer h1,
+    footer h2,
+    footer h3,
+    footer h4,
+    footer h5,
+    footer h6,
+    footer a,
+    footer li,
+    #index-content {
+      text-align: right;
+      direction: rtl;
+    }
     @keyframes pulse{
       0%{ transform:scale(1); }
       50%{ transform:scale(1.08); }
@@ -378,8 +395,8 @@ TEAM PAGE (team.html)
 
       <!-- Departments -->
       <div class="col-md-3 mb-4">
-        <h6 class="fw-bold">بخش‌ها</h6>
-        <ul class="list-unstyled">
+        <h6 class="fw-bold pe-md-5">بخش‌ها</h6>
+        <ul class="list-unstyled pe-md-5">
           <li>قلب و عروق</li>
           <li>رادیولوژی</li>
           <li>اورژانس</li>
@@ -413,7 +430,7 @@ TEAM PAGE (team.html)
 
     <!-- Bottom -->
     <div class="text-center">
-      <p class="mb-0">© 2026 شفاخانه KMC - تمامی حقوق محفوظ است</p>
+      <p class="mb-0" style="text-align:center;">© 2026 شفاخانه KMC - تمامی حقوق محفوظ است</p>
     </div>
   </div>
 </footer>
